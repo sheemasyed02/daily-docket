@@ -1,0 +1,53 @@
+{
+  "name": "daily-docket",
+  "version": "1.0.0",
+  "description": "Smart Daily Planner with drag-and-drop functionality",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev --no-sandbox",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "build-mac": "electron-builder --mac",
+    "build-linux": "electron-builder --linux",
+    "clean": "rimraf node_modules && rimraf dist && npm cache clean --force"
+  },
+  "build": {
+    "appId": "com.dailydocket.app",
+    "productName": "Daily Docket",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "src/assets/icons/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "src/assets/icons/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "src/assets/icons/icon.png"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^36.3.2",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "chart.js": "^4.4.9",
+    "date-fns": "^4.1.0",
+    "sortablejs": "^1.15.6",
+    "uuid": "^11.1.0"
+  }
+}
