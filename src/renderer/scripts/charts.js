@@ -1,4 +1,4 @@
-class ChartManager {
+class ChartManager { 
     constructor() {
         this.progressChart = null;
         this.priorityChart = null;
