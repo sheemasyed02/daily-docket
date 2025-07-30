@@ -1,7 +1,7 @@
 const { app, BrowserWindow, ipcMain, Notification, Menu } = require('electron');
 const path = require('path');
 const fs = require('fs'); // Add this for debugging
-
+ 
 let mainWindow;
 
 function createWindow() {
